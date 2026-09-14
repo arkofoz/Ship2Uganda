@@ -2201,30 +2201,6 @@ body.dark .addon-row {
     <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
     
     <script>
-        // ===== DARK MODE =====
-        const darkToggle = document.getElementById('darkToggle');
-        const body = document.body;
-        const icon = darkToggle.querySelector('i');
-        
-        if (localStorage.getItem('theme') === 'dark') {
-            body.classList.add('dark');
-            icon.classList.remove('fa-sun');
-            icon.classList.add('fa-moon');
-        }
-        
-        darkToggle.addEventListener('click', () => {
-            body.classList.toggle('dark');
-            if (body.classList.contains('dark')) {
-                icon.classList.remove('fa-sun');
-                icon.classList.add('fa-moon');
-                localStorage.setItem('theme', 'dark');
-            } else {
-                icon.classList.remove('fa-moon');
-                icon.classList.add('fa-sun');
-                localStorage.setItem('theme', 'light');
-            }
-        });
-        
         // ===== MOBILE MENU =====
         const hamburger = document.getElementById('hamburgerBtn');
         const sideMenu = document.getElementById('sideMenu');
